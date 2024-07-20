@@ -1,0 +1,44 @@
+JavaScript is single-threaded: JavaScript is a single-threaded language, meaning it can only execute one task at a time. However, it can create the illusion of concurrency using various techniques, such as:
+
+Context switching: The JavaScript engine rapidly switches between tasks, giving the impression of simultaneous execution.
+Delegation: JavaScript uses callbacks, promises, and async/await to delegate tasks to other components, like the browser's Web API or Node.js's event loop, which can execute tasks concurrently.
+Two types of functions: Synchronous and Asynchronous
+
+You're correct again!
+
+Synchronous functions:
+
+Execute sequentially, one after the other.
+Block the execution of other code until they complete.
+Return a value immediately.
+Example: console.log(), Math.sqrt(), etc.
+
+
+Asynchronous functions:
+
+Execute concurrently, without blocking other code.
+Return a value at a later time, using callbacks, promises, or async/await.
+Allow other code to run while waiting for the asynchronous operation to complete.
+Example: setTimeout(), fetch(), XMLHttpRequest, etc.
+
+
+code:
+function sum(n)
+{
+  let ans=0;
+  for(let i=0;i<n;i++)
+    {
+      ans+=i;
+    }
+  return ans;
+}
+function something()
+{
+  console.log(sum(1000));
+}
+setTimeout(something,1000);
+console.log("hello world");
+
+output:
+hello world
+499500
