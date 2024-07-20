@@ -22,7 +22,7 @@ Allow other code to run while waiting for the asynchronous operation to complete
 Example: setTimeout(), fetch(), XMLHttpRequest, etc.
 
 
-code:
+code of async function
 function sum(n)
 {
   let ans=0;
@@ -42,3 +42,25 @@ console.log("hello world");
 output:
 hello world
 499500
+
+code of sync function:
+
+function sum(n)
+{
+  let ans=0;
+  for(let i=0;i<n;i++)
+    {
+      ans+=i;
+    }
+  return ans;
+}
+function something()
+{
+  console.log(sum(100000000));
+}
+something();
+console.log("hello world");
+
+output:
+499500000
+hello world
