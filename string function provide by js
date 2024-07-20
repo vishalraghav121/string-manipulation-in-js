@@ -1,0 +1,25 @@
+// string manipulation with js
+//getlength of string
+var name = "sachin";
+console.log(name.length);
+//find indexof target;
+var a = "ram";
+var str = "jai shree ram";
+console.log(str.indexOf(a));
+//last index of element
+var a = "a";
+var s = "a babadj ahahdhd";
+console.log(s.lastIndexOf(a));
+//slice of string slice(starting index,lastindex);
+var a = "sachin is a good boy";
+console.log(a.slice(1, 4));
+//substring
+console.log(a.substr(0, 4));
+//replace
+console.log(a.replace("sachin", "sachinkumar"));
+//split that spilt the string across delimiter  and return  array of separated string
+var b = a.split(" ");
+console.log(b);
+//parseInt convert string into integer until there is no chararcter before the integer otherwise it return NAN
+var ans="4583shdhdyd";
+console.log(parseInt(ans));
